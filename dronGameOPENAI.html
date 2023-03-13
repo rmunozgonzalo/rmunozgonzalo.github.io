@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drone Game</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		body {
+			background-color: #000;
+		}
+	h1 {
+		color: #fff;
+		font-size: 4rem;
+		font-family: 'Press Start 2P', cursive;
+		text-align: center;
+		margin-top: 2rem;
+		text-shadow: 2px 2px #000;
+	}
+
+	canvas {
+		display: block;
+		margin: 0 auto;
+		border: 2px solid #fff;
+		background-color: #333;
+		box-shadow: 0 0 5px 1px #fff;
+		background-image: url('camino.svg');
+		background-repeat: repeat-x;
+		border: 2px solid #000;
+		border-radius: 5px;
+		box-shadow: 5px 5px 5px #000;
+		margin-top: 2rem;
+	}
+
+	p {
+		color: #fff;
+		font-size: 2rem;
+		font-family: 'Press Start 2P', cursive;
+		text-align: center;
+		margin-top: 1rem;
+	}
+
+	#highScoresList {
+		color: #fff;
+		font-size: 1.5rem;
+		font-family: 'Press Start 2P', cursive;
+		text-align: center;
+		margin-top: 2rem;
+		list-style: none;
+		padding: 0;
+	}
+
+	#highScoresList li {
+		margin: 0.5rem;
+	}
+
+	.high-score {
+		background-color: #fff;
+		color: #000;
+		padding: 0.5rem;
+		border-radius: 5px;
+		box-shadow: 2px 2px #000;
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Drone Game</h1>
+				<canvas id="gameCanvas" width="400" height="400"></canvas>
+				<p>Score: <span id="score">0</span></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h3>High Scores:</h3>
+				<ul id="highScoresList">
+				</ul>
+			</div>
+		</div>
+	</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
