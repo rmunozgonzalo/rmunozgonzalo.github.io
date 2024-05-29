@@ -79,6 +79,10 @@ function update() {
 		obstacle.x = canvas.width;
 		obstacle.y = Math.floor(Math.random() * (canvas.height - 20) + 10);
 		score++;
+
+		 if (score >= 10) {
+	            obstacle.speed = 5;
+	        }
 	}
 
 	if (drone.x < obstacle.x + obstacle.width && 
