@@ -37,7 +37,7 @@ const obstacle = {
   y: Math.floor(Math.random() * (canvas.height - 20) + 10),
   width: 50, // ancho de la imagen
   height: 50, // alto de la imagen
-  speed: 3,
+  speed: 5,
   draw: function() {
     ctx.drawImage(obstacleImg, this.x, this.y, this.width, this.height);
   }
@@ -80,8 +80,8 @@ function update() {
 		obstacle.y = Math.floor(Math.random() * (canvas.height - 20) + 10);
 		score++;
 
-		 if (score >= 10) {
-	            obstacle.speed = 5;
+		 if (score % 2 === 0) {
+	            obstacle.speed += 2; // Aumentar la velocidad en 2
 	        }
 	}
 
